@@ -19,7 +19,10 @@
     <button onclick="display_time()">Click</button>
     <script type="text/javascript">
         function display_time() {
-            document.getElementById("date_time").textContent = "yoooooo";
+            const time = new Date();
+            const curtime = time.toLocaleTimeString();
+            document.getElementById("date_time").textContent = curtime;
         }
+        setInterval(display_time, 1000);
     </script>
 </body>
